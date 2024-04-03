@@ -1,6 +1,7 @@
 import styles from "./Carousel.module.scss";
 import Slider from "react-slick";
 import { useState, useRef, useEffect } from "react";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 export default function Select() {
   const cards = [
@@ -56,8 +57,13 @@ export default function Select() {
     },
   ];
   const [isPlaying, setIsPlaying] = useState(true);
+  const [openModal, setOpenModal] = useState(false);
   const progressBar = useRef(null);
   const carousel = useRef(null);
+  const modalRef = useRef(null);
+  const [src, setSrc] = useState("");
+
+  useOnClickOutside(modalRef, () => setOpenModal(false));
 
   const settings = {
     dots: false,
@@ -91,83 +97,109 @@ export default function Select() {
   }
 
   return (
-    <div className="section hero">
-      <div className="container-skel">
-        <div className="twelve columns ">
-          <Slider {...settings} className="" ref={carousel}>
-            {cards.map((card, index) => (
-              <div className="comp-container hero-card" key={index}>
-                <div className="comp-left">
-                  <div>
-                    <div className="comp-text">
-                      <h2>{card.title}</h2>
-                      <div className="copy">{card.copy}</div>
-                    </div>
-                    {/* CTA BTN */}
-                    <div className="inner-row">
-                      {card.cta.map((cta, index) => (
-                        <div className="cta" key={index}>
-                          <a
-                            data-fancybox
-                            data-type="iframe"
-                            data-src={cta.link}
-                            className="newbtn"
-                            data-single-instance={
-                              card.cta.length === 1 ? true : false
-                            }
-                          >
-                            {cta.title}
-                          </a>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className="comp-right">
-                  <div className="right-img">
-                    <img src={card.image} alt="" />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
-        {/* controls */}
-        <div className="swiper-controls">
-          <div
-            className="swiper-controls__wrapper"
-            data-state={isPlaying ? "playing" : "paused"}
-          >
-            <div className="swiper-indicator" ref={progressBar}>
-              {" "}
+    <>
+      <div className="section hero">
+        <div className="container-skel">
+          <div className="twelve columns ">
+            <Slider {...settings} className="" ref={carousel}>
               {cards.map((card, index) => (
-                <div
-                  className="autoplay-progress"
-                  key={index}
-                  onClick={(e) => handleClickProgress(e, index)}
-                >
-                  <div
-                    className="progress-bar"
-                    onAnimationEnd={() => {
-                      if (carousel.current) carousel.current.slickNext();
-                    }}
-                  />
+                <div className="comp-container hero-card" key={index}>
+                  <div className="comp-left">
+                    <div>
+                      <div className="comp-text">
+                        <h2>{card.title}</h2>
+                        <div className="copy">{card.copy}</div>
+                      </div>
+                      {/* CTA BTN */}
+                      <div className="inner-row">
+                        {card.cta.map((cta, index) => (
+                          <div
+                            className="cta"
+                            key={index}
+                            onClick={() => {
+                              setSrc(cta.link);
+                              setOpenModal(true);
+                            }}
+                          >
+                            <a
+                              data-fancybox
+                              data-type="iframe"
+                              data-src={cta.link}
+                              className="newbtn"
+                              data-single-instance={
+                                card.cta.length === 1 ? true : false
+                              }
+                            >
+                              {cta.title}
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="comp-right">
+                    <div className="right-img">
+                      <img src={card.image} alt="" />
+                    </div>
+                  </div>
                 </div>
               ))}
-            </div>
-            <button
-              className="swiper-controls__pause"
-              onClick={() => {
-                setIsPlaying(!isPlaying);
-                if (isPlaying) carousel.current.slickPause();
-                else carousel.current.slickPlay();
-              }}
+            </Slider>
+          </div>
+          {/* controls */}
+          <div className="swiper-controls">
+            <div
+              className="swiper-controls__wrapper"
+              data-state={isPlaying ? "playing" : "paused"}
             >
-              {" "}
-            </button>
+              <div className="swiper-indicator" ref={progressBar}>
+                {" "}
+                {cards.map((card, index) => (
+                  <div
+                    className="autoplay-progress"
+                    key={index}
+                    onClick={(e) => handleClickProgress(e, index)}
+                  >
+                    <div
+                      className="progress-bar"
+                      onAnimationEnd={() => {
+                        if (carousel.current) carousel.current.slickNext();
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+              <button
+                className="swiper-controls__pause"
+                onClick={() => {
+                  setIsPlaying(!isPlaying);
+                  if (isPlaying) carousel.current.slickPause();
+                  else carousel.current.slickPlay();
+                }}
+              >
+                {" "}
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="container-modal" data-open-modal={openModal}>
+        <div className="close-modal">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 10.6L6.6 5.2 5.2 6.6l5.4 5.4-5.4 5.4 1.4 1.4 5.4-5.4 5.4 5.4 1.4-1.4-5.4-5.4 5.4-5.4-1.4-1.4-5.4 5.4z"></path>
+          </svg>
+        </div>
+        <div className="modal" data-open-modal={openModal} ref={modalRef}>
+          <iframe
+            src={src}
+            title="Matterport Showroom"
+            width="100%"
+            height="100%"
+            style={{ border: "none" }}
+          ></iframe>
+        </div>
+      </div>
+    </>
   );
 }
