@@ -21,7 +21,10 @@ export default function Select() {
 
   const optionsRef = useRef(null);
 
-  useOnClickOutside(optionsRef, () => setOpen(false));
+  useOnClickOutside(optionsRef, () => {
+    setOpen(false);
+    setSelected(null);
+  });
 
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(null);
