@@ -11,7 +11,7 @@
 
 .cta {
   a {
-    width: 215px !important;
+    width: 220px !important;
     height: 43px;
     font-size: 16px !important;
     color: white !important;
@@ -29,11 +29,14 @@
 .swiper-controls {
   max-width: 386px !important;
   left: 19%;
+}
 
-  &__pause {
-    //padding-bottom: 5px;
-    padding-left: 1px;
-  }
+.swiper-controls__pause::before {
+  height: 30px !important;
+  display: flex !important;
+  width: 30px !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .progress-bar.active {
