@@ -1,0 +1,106 @@
+body {
+  background-color: #ece7dd;
+  font-family: "LG Smart Regular", sans-serif;
+}
+
+.inner-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.comp-text {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.comp-container {
+  background-color: #fefdf7;
+  border-radius: 80px;
+  width: 1600px;
+  height: 600px;
+  display: flex !important;
+  justify-content: space-between;
+}
+.comp-container .comp-left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 110px;
+  width: 50%;
+}
+
+.comp-container h2 {
+  font-size: 48px;
+  font-weight: 400;
+  margin: 0;
+}
+.comp-container .copy {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.comp-container .comp-right {
+  display: flex;
+  align-items: center;
+}
+
+.comp-right .left-img {
+  display: none;
+}
+
+.left-img img {
+  width: 360px;
+  height: 360px;
+}
+
+.right-img {
+  display: none;
+}
+
+/* .hide-on-mobile {
+  display: none;
+} */
+
+@media (min-width: 500px) {
+  .comp-right .left-img {
+    display: none;
+  }
+
+  /* .hide-on-mobile {
+    display: flex;
+  }
+
+  .inner-row.hide-on-tablet {
+    display: none;
+  } */
+}
+
+@media (min-width: 1090px) {
+  .inner-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .comp-right .left-img {
+    display: none;
+  }
+
+  .right-img {
+    display: block;
+  }
+}
+
+@media (min-width: 1470px) {
+  .comp-right .left-img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 380px;
+  }
+}

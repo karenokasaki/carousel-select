@@ -1,0 +1,430 @@
+/*
+================================
+SLICK SLIDER
+================================
+*/
+.slider.heroslider > slick-track:not(:first-child) {
+  display: none;
+}
+/* remove pagination dots on sigle card */
+.slick-dots {
+  > li {
+    display: inline-block;
+  }
+  > li:only-child {
+    display: none;
+  }
+}
+
+/*
+================================
+SLICK SLIDER
+================================
+*/
+.slider.slick-carousel-wcard-d > slick-track:not(:first-child) {
+  display: none;
+}
+/* remove pagination dots on sigle card */
+.slick-dots {
+  > li {
+    display: inline-block;
+  }
+  > li:only-child {
+    display: none;
+  }
+}
+
+.section.hero .slick-slide {
+  margin: 0px;
+}
+.slick-slide {
+  margin: 0 10px;
+}
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.prev-arrow {
+  left: -40px;
+  z-index: 1;
+  border: solid #767676;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+}
+.next-arrow {
+  right: -40px;
+  border: solid #767676;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+}
+.slider.slick-hero .prev-arrow {
+  left: 20px;
+}
+.slider.slick-hero .next-arrow {
+  right: 20px;
+}
+.next-arrow:hover,
+.prev-arrow:hover {
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+}
+.slick-slide .slide-content {
+  width: 100%;
+  margin: 0 auto;
+}
+.slick-list {
+  margin: 0px;
+}
+.slick-prev,
+.slick-next {
+  position: absolute;
+  right: calc(50% - 7.725rem);
+  border: none;
+  color: transparent;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  line-height: 0;
+  position: absolute;
+  top: 100%;
+  display: block;
+  z-index: 1;
+  transform: translate(0px, -50%);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+}
+.slick-prev {
+  left: calc(50% - 7.725rem);
+}
+.slick-next:before {
+  content: "";
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23a50034" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/><path d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg>');
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: inherit;
+}
+.slick-prev:before {
+  content: "";
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23a50034" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>');
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: inherit;
+}
+.slick-dots {
+  position: relative;
+  display: block;
+  padding: 0px;
+  margin-top: 30px !important;
+  transform: translateY(50%);
+  list-style: none;
+  text-align: center;
+  line-height: 0;
+  width: 100%;
+  bottom: 0;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 12.5px;
+  margin: 0px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  position: relative;
+  line-height: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0px;
+  margin: 0.125rem;
+  display: block;
+  cursor: pointer;
+  color: transparent;
+  border: 0px;
+  outline: none;
+  background: transparent;
+}
+.slick-dots li button::before {
+  line-height: 0;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border-radius: 50%;
+  text-align: center;
+  /* opacity: 0.26;
+    background-color: rgb(27, 26, 30); */
+}
+.slick-dots li button:hover::before,
+.slick-dots li button:focus::before,
+.slick-dots li.slick-active button::before {
+  opacity: 1;
+  background-color: rgb(165, 0, 52);
+}
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  background-color: #a50034;
+  color: transparent;
+}
+.slick-dots li button:before {
+  /* border: 1px solid rgba(0,0,0,.5);  */
+  opacity: 1;
+  background-color: #c4c4c5;
+  color: transparent;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.gallery-carousel .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+  display: none;
+  color: #737272;
+  font-family: "LG Smart Regular";
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+}
+.gallery-carousel .slick-dots a {
+  color: #737272;
+  transition: 0.3s all;
+}
+.gallery-carousel .slick-dots,
+.gallery-carousel .slick-dots .slick-active {
+  display: block;
+  padding-top: 5px;
+}
+.gallery-carousel .slick-dots a {
+  opacity: 1;
+  display: block;
+  transition: 0.3s all;
+}
+/* slick custom */
+.slick-hero .slick-dots {
+  margin-top: -80px !important;
+}
+
+.slick-carousel-wcard-d .slick-dots {
+  margin-top: 0px !important;
+}
+
+/* slick custom */
+.slick-hero .slick-dots {
+  margin-top: -80px !important;
+}
+
+.heroslider .slick-dots {
+  margin-top: -50px !important;
+}
+
+ul.slick-dots {
+  padding: 0px;
+}
+ul.slick-dots li {
+  margin: 0px;
+}
+
+/*
+================================
+TOUT SLIDER
+================================
+*/
+.toutslider .product {
+  padding: 20px; /* remove for full bleed image */
+  background-color: #fff;
+  margin: 0px 20px 10px 10px;
+  text-align: center;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  /* box-shadow: 0px 1px 2px rgba(27, 26, 30, 0.15); */
+  box-shadow: rgba(27, 26, 30, 0.15) 0px 2px 10px;
+}
+.toutslider .product img {
+  text-align: center;
+  margin: 0 auto;
+}
+.toutslider .product .copyblock {
+  text-align: left;
+  padding: 20px 10px;
+}
+.toutslider .product .copyblock .eyebrow {
+  padding: 0px 0px 5px 0px;
+  color: rgba(27, 26, 30, 0.87);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.071em;
+  text-transform: uppercase;
+}
+.toutslider .product .copyblock .title {
+  padding: 0px 0px 20px 0px;
+  min-height: 180px;
+  font-size: 22px;
+  line-height: 27px;
+}
+.toutslider .product .copyblock a {
+  width: 100%;
+  text-align: center;
+}
+.toutslider .product .copyblock .price {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+}
+.toutslider .product .copyblock .price h5 {
+  font-size: 2rem;
+  margin: 0px 0.5rem 0px 0px;
+  font-weight: 400;
+  line-height: 1;
+  font-family: "LG Smart", sans-serif;
+  text-align: right;
+  color: rgba(27, 26, 30, 0.87);
+  overflow-wrap: inherit;
+}
+.toutslider .product .copyblock .price .wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.toutslider .product .copyblock .price .wrap .discount {
+  margin: 0px;
+  text-transform: inherit;
+  font-family: "LG Smart", sans-serif;
+  color: rgb(165, 0, 52);
+  overflow-wrap: inherit;
+  font-size: 0.875rem;
+  display: block;
+  line-height: 1.5;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.toutslider .product .copyblock .price .wrap .retail {
+  margin: 0px;
+  font-weight: 400;
+  text-transform: inherit;
+  font-family: "LG Smart", sans-serif;
+  color: rgba(27, 26, 30, 0.6);
+  overflow-wrap: inherit;
+  text-decoration-line: line-through;
+  text-decoration-style: initial;
+  cursor: inherit;
+  text-underline-position: under;
+  text-decoration-color: inherit;
+  text-decoration-thickness: from-font;
+  font-size: 0.875rem;
+  display: block;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/*
+================================================================
+TABLET LANDSCAPE 
+================================================================
+*/
+@media (min-width: 900px) and (max-width: 1199px) {
+  .toutslider .product .copyblock .price h5 {
+    font-size: 1.5rem;
+  }
+  .toutslider .product .copyblock .title {
+    min-height: 230px;
+  }
+
+  .product-carousel .product h2,
+  .product-carousel2 .product h2,
+  .product-carousel3 .product h2,
+  .product-carousel4 .product h2,
+  .product-carousel5 .product h2 {
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 0px 20px 0px;
+    color: #666666;
+    min-height: 200px;
+  }
+}
+
+/*
+================================================================
+MOBILE LANDSCAPE & TABLET PORTRAIT
+================================================================
+*/
+@media (min-width: 600px) and (max-width: 899px) {
+  /* .slick-dotted.slick-slider {
+       margin-bottom: 30px;
+       padding: 0 40px;
+   } */
+}
+
+/*
+================================================================
+MOBILE PORTRAIT 
+================================================================
+*/
+@media (max-width: 599px) {
+  .toutslider .product .copyblock .title {
+    min-height: 150px;
+  }
+  .toutslider .product {
+    margin: 5px;
+  }
+}

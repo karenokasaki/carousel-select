@@ -1,0 +1,1001 @@
+/*
+================================
+HSAD BASE 2023
+================================
+*/
+
+/* ---------------------------------- BOOTSTRAP BATTLES ---------------------------------- */
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.row {
+    margin: 0px;
+}
+/* ---------------------------------- BOOTSTRAP BATTLES ---------------------------------- */
+
+.section {
+    font-family: 'LG Smart Regular';
+    font-weight: 400;
+    color:#1E1E1E;
+    /* font-size: 18px;
+    line-height: 24px; */
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    padding-bottom: 75px;
+}
+.section .pad-bot {
+    padding-bottom: 50px;
+}
+.section .aligncenter {
+    text-align: center;
+}
+.dark-copy {
+    color: #000;
+}
+.light-copy {
+    color: #fff;
+}
+.section .copyblock .eyebrow {
+    font-size: 14px;
+    line-height: 26px;
+    padding-bottom: 10px;
+    letter-spacing: 0.071em;
+    text-transform: uppercase;
+}
+.section .copyblock .title h2 {
+    font-family: 'LG Smart Regular';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    padding-bottom: 10px;
+}
+.section .copyblock .copy {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 20px 0px 30px 0px;
+}
+.section .copyblock .fine {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 20px 0px;
+}
+.section .sectitle {
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 40px 0px;
+}
+.section .sectitle .eyebrow {
+    font-size: 14px;
+    line-height: 26px;
+    padding-bottom: 10px;
+    letter-spacing: 0.071em;
+    text-transform: uppercase;
+}
+.section .sectitle h2 {
+    font-family: 'LG Smart Regular';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    padding-top: 25px;
+    color: #000;
+}
+.section .sectitle h2 sup {
+    top: -1.5em;
+    font-size: 30%;
+}
+@media (min-width: 600px) and (max-width: 899px) {
+    /* ==== TABLET PORTRAIT & MOBILE LANDSCAPE ==== */
+    .section .sectitle {
+        text-align: center;
+        padding: 40px 0px;
+    }
+    .section .sectitle h2 {
+        font-family: 'LG Smart Regular';
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 34px;
+        text-align: center;
+        padding-top: 25px;
+        color: #000;
+    }
+    .section .sectitle h2 sup {
+        top: -1.5em;
+        font-size: 30%;
+    }
+}
+@media (max-width: 599px) {
+    /* ==== MOBILE PORTRAIT ==== */
+    .section .sectitle {
+        text-align: center;
+        padding: 40px 0px;
+    }
+    .section .sectitle h2 {
+        font-family: 'LG Smart Regular';
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 34px;
+        text-align: center;
+        padding-top: 25px;
+        color: #000;
+    }
+}
+.section .cta {
+    margin: 0px;
+    padding: 0px;
+    line-height: 0px;
+}
+.section a:hover {
+    text-decoration: none;
+}
+.section img {
+    max-width: 100%
+}
+.section ol li,
+.section ul ol li {
+    list-style: auto;
+}
+.section ul ul {
+    padding: 0px 0 0 50px;
+}
+.section ul {
+    padding: 0px;
+}
+.section ul li, ol li {
+    margin-bottom: 0px;
+}
+.section ul li {
+    margin-left: 30px;
+    list-style-type: disc;
+    text-align: left;
+    padding-bottom: 15px;
+} 
+.section .red {
+    color:#a50034;
+} 
+.section a,
+.red a {
+    color:#a50034;
+    text-decoration: underline;
+}
+.section .italic {
+    font-style: italic;
+}
+.section .bold,
+.bold {
+    font-family: 'LG Smart Bold';
+}
+.row-skel:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding-bottom: 2%;
+}
+#sticky {
+    top: 0px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+#hidden-lightbox .copy img {
+    max-width: 100%;
+}
+.fancybox-slide--iframe .fancybox-content, 
+.fancybox-iframe {
+	background: transparent;
+}
+.breadcrumb {
+    color: #fff;
+    display: none!important;
+}
+.container-skel .row { 
+    margin: 0px; /* override bootstrap */
+} 
+ul.foot-disclaim li { 
+    padding-bottom: 10px;
+}
+.zoom {
+    display:inline-block;
+    border:0;
+    position: relative;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+
+}
+.zoom:hover {
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.03);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.03);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.03);
+    transition: all 200ms ease-in;
+    transform: scale(1.03);
+}
+div.cta a.newbtn:not(:first-of-type) {
+    margin-left: 1rem !important;
+}
+a.newbtn {
+    color: #fff;
+    text-decoration: none;
+}
+.newbtn {
+    display: inline-block;
+    margin: 0 0 10px 0;
+    padding: 7px 14px !important;
+    border-radius: 100vw;
+    background-color: #A60032;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.05em;
+    font-family: 'LG Smart Bold';
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    border: 2px solid #FD312D;
+}
+.newbtn::before {
+    content: "";
+    position: absolute;
+    border-radius: 30px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 2px solid transparent;
+    background-color: #FD312D;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+.newbtn:hover {
+    border: 2px solid #A60032;
+    color: #fff;
+}
+.newbtn:hover::before {
+    background-color: #A60032;
+    left: 100%;
+}
+.newbtn:active {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.newbtn.inverse {
+    display: inline-block;
+    margin: 0;
+    padding: 7px 14px !important;
+    border-radius: 100vw;
+    background-color: #fff;
+    color: #A60032;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.05em;
+    font-family: 'LG Smart Bold';
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    border: 2px solid #fff;
+}
+.newbtn.inverse::before {
+    content: "";
+    position: absolute;
+    border-radius: 30px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 2px solid transparent;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+.newbtn.inverse:hover {
+    border: 2px solid #f8f8f8;
+    background-color: #f8f8f8;
+    color: #A60032;
+}
+.newbtn.inverse:hover::before {
+    background-color: #fff;
+    left: 100%;
+}
+.newbtn.inverse:active {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.newbtn-outline {
+    display: inline-block;
+    margin: 0;
+    padding: 7px 14px !important;
+    border-radius: 100vw;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.05em;
+    font-family: 'LG Smart Bold';
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    color: #6b6b6d;
+    border: 1px solid #6b6b6d;
+    background-color: transparent;
+}
+.newbtn-outline::before {
+    content: "";
+    position: absolute;
+    border-radius: 30px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+.newbtn-outline:hover {
+    background-color: #A60032;
+    border: 1px solid #A60032;
+    color: #fff;
+}
+.newbtn-outline:hover::before {
+    background-color: #A60032;
+    left: 100%;
+    border: 1px solid #A60032;
+}
+@media (min-width: 600px) and (max-width: 899px) {
+    /* ==== TABLET PORTRAIT & MOBILE LANDSCAPE ==== */
+    div.cta a.newbtn:not(:first-of-type) {
+        margin-left: 0rem !important;
+    }
+    /* .newbtn,
+    .newbtn.inverse,
+    .newbtn-outline {
+        width: 100%;
+        text-align: center;
+    } */
+}
+@media (max-width: 599px) {
+    /* ==== MOBILE PORTRAIT ==== */
+    .newbtn,
+    .newbtn.inverse,
+    .newbtn-outline {
+        width: 100%;
+        text-align: center;
+    }
+    div.cta a.newbtn:not(:first-of-type) {
+        margin-left: 0rem !important;
+    }
+}
+
+.for-mobile {
+    display: none !important;
+}
+@media (min-width: 600px) and (max-width: 899px) {
+    /* ==== TABLET PORTRAIT & MOBILE LANDSCAPE ==== */
+    .for-mobile {
+        display: none!important;
+    }
+    .for-desktop {
+        display: inherit!important;
+    }
+}
+@media (max-width: 599px) {
+    /* ==== MOBILE PORTRAIT ==== */
+    .for-mobile {
+        display: inherit!important;
+    }
+    .for-desktop {
+        display: none!important;
+    }
+}
+
+
+
+
+/*
+================================
+MOSAIC GRID
+================================
+*/
+.section.mosaic .column .overlay-card-image, 
+.section.mosaic .columns .overlay-card-image,
+.section.mosaic .columns video {
+    border-radius: 25px;
+}
+.section.mosaic .seven.columns {
+    width: 58.666667%;
+    margin-left: 2%;
+}
+.section.mosaic .tout-card.one {
+    padding-bottom: 4%;
+}
+.section.mosaic .tout-card {
+    position: relative;
+}
+.section.mosaic .seven.columns.inverse {
+    width: 58.666667%;
+    margin-left: 0%;
+}
+.section.mosaic .five.columns.inverse {
+    margin-left: 2%;
+}
+.section.mosaic .mosaicpad {
+    padding-top: 2%;
+}
+@media (max-width: 599px) {
+    /* ==== MOBILE PORTRAIT ==== */
+    .section.mosaic .columns {
+        padding-bottom: 4%;
+    }
+    .section.mosaic .seven.columns.inverse,
+    .section.mosaic .five.columns.inverse,
+    .section.mosaic .seven.columns {
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+
+
+
+
+/*
+================================
+VIDEO
+================================
+*/
+video {
+    width: 100%;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+.section .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.section .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.section .inline-video {
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-top: 56.25%; /* 9 / 16 * 100 */
+}
+.section .inline-video > iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+.video__inline video {
+    /* border-radius: 40px; */
+}
+.video__inline {
+    display: inline-block;
+    position: relative;
+}
+.video__play-button {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 40px;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    -webkit-appearance: none;
+    z-index: 2;
+    transition: all 200ms ease-in-out;
+}
+.video__play-button-icon {
+    width: 15%;
+    transition: all 200ms ease-in-out;
+}
+.video__play-button-icon--play polygon {
+    transform-origin: 50% 50%;
+    transition: all 200ms ease-in-out;
+}
+.video__play-button-icon--play:hover polygon {
+    transform: scale(1.5);
+}
+.video__play-button[data-button-state=pause] .video__play-button-icon--pause {
+    display: none;
+}
+.video__play-button[data-button-state=play] .video__play-button-icon--play {
+    display: none;
+}
+.video__play-button[data-button-state=play] .video__play-button-icon {
+    opacity: 0;
+}
+.video__play-button[data-button-state=play]:hover .video__play-button-icon {
+    /* opacity: 1; */
+    opacity: 0;
+}
+.video__play-button[data-button-state=play] {
+    background-color: rgba(0, 0, 0, 0);
+}
+.video__play-button[data-button-state=play]:hover {
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+button.video__play-button {
+    margin: 0; 
+    padding: 0; 
+    background: none; 
+    border: none; 
+    border-radius: 0; 
+    outline: none; -webkit-appearance: none; -moz-appearance: none; 
+    appearance: none; 
+    }
+button.video__play-button:focus, button:hover { 
+    outline: none !important; 
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important; 
+}
+.video__fullscreen-button {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-appearance: none;
+    z-index: 3;
+    transition: all 200ms ease-in-out;
+}
+.video__fullscreen-icon {
+    padding: 10px;
+    display: block;
+    vertical-align: top;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease-in-out;
+}
+.video__inline[data-state=pause] .video__fullscreen-icon,
+.video__inline[data-state=play]:hover .video__fullscreen-icon {
+    opacity: 1;
+    visibility: visible;
+}
+.video__fullscreen-icon polygon {
+    fill: currentColor;
+}
+
+
+/*
+================================
+HERO 
+================================
+*/
+.section.hero .hero-card {
+    position: relative;
+}
+.section.hero .hero-card .copyblock .eyebrow {
+    font-size: 14px;
+    line-height: 26px;
+    padding-bottom: 10px;
+    letter-spacing: 0.071em;
+    text-transform: uppercase;
+}
+.section.hero .hero-card .copyblock .title h2 {
+    font-family: 'LG Smart Regular';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+}
+.section.hero .hero-card .copyblock .copy {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 20px 0px 30px 0px;
+}
+.section.hero .hero-card .copyblock .copy sup {
+    top: -1em;
+    font-size: 50%;
+}
+.section.hero .hero-card .copyblock .title h2 sup {
+    top: -1.5em;
+    font-size: 30%;
+}
+.section.hero .hero-card-overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+@media (min-width: 900px) {
+    .section.hero .hero-card-overlay .copyblock.left {
+        max-width: 520px;
+        width: 40%;
+        position: relative;
+        left: 25%;
+        transform: translateX(-50%);
+    }
+    .section.hero .hero-card-overlay .copyblock.center {
+        max-width: 520px;
+        width: 40%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    .section.hero .hero-card-overlay .copyblock.right {
+        max-width: 520px;
+        width: 40%;
+        position: relative;
+        left: 75%;
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 899px) {
+    .section.hero .hero-card-overlay {
+      color: #000;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      top: 0;
+      left: 0;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      padding: 4rem;
+    }
+}
+@media (max-width: 599px) {
+    .section.hero .container-skel {
+        padding: 0px;
+    }
+    .section.hero .hero-card-overlay .copy {
+        min-height: 250px;
+    }
+    .section.hero .hero-card-overlay {
+        padding: 2rem 10% 4rem;
+    }
+}
+
+
+/*
+================================
+Overlay Card  - Desktop & iPad Pro Landscape
+================================
+*/
+.overlay-card {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex!important;
+    overflow:hidden;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-card-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.overlay-card-copy-left {
+    position: absolute;
+    width: 50%;
+    left: 5%;
+    padding: 0%;
+    height: auto;
+}
+.overlay-card-copy-left-top {
+    position: absolute;
+    width: 50%;
+    left: 5%;
+    top: 50px;
+    padding: 0%;
+    height: auto;
+}
+.overlay-card-copy-right {
+    position: absolute;
+    width: 50%;
+    right: 5%;
+    padding: 0%;
+    height: auto;
+}
+.overlay-card-copy-center {
+    position: absolute;
+    left: calc(100% - 19,5%);
+    width: clamp(250px, 75%, 900px);
+    padding: 0%;
+    height: auto;
+    text-align: center;
+}
+.overlay-card .copyblock {
+    line-height: 0px;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+.overlay-card .copyblock .eyebrow {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    letter-spacing: 0.071em;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.overlay-card .copyblock .title h2,
+.overlay-card .copyblock .title h2,
+.overlay-card .copyblock .title h2 {
+    font-family: 'LG Smart Regular';
+    font-weight: 400;
+    font-size: 2.9991rem;  
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.1rem;
+}
+.overlay-card .copyblock .copy {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+.overlay-card .bottomout {
+    bottom: 7.5%!important;
+}
+
+@media (min-width: 900px) {
+    /* iPad Landscape & iPadPro Portrait */
+    .overlay-card .copyblock .title h2,
+    .overlay-card .copyblock .title h2,
+    .overlay-card .copyblock .title h2 {
+        font-family: 'LG Smart Regular';
+        font-weight: 400;
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    .overlay-card .copyblock.smallcard .title h2,
+    .overlay-card .copyblock.smallcard .title h2,
+    .overlay-card .copyblock.smallcard .title h2 {
+        font-family: 'LG Smart Regular';
+        font-weight: 400;
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+    .overlay-card .copyblock .copy {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
+        max-width: 10em;
+        padding: 0px;
+    }
+}
+
+
+
+@media (max-width: 899.95px) {
+    /* Mobile Portrait & Landscape iPad Portrait */
+    .overlay-card .copyblock .title h2,
+    .overlay-card .copyblock .title h2,
+    .overlay-card .copyblock .title h2 {
+        font-family: 'LG Smart Regular';
+        font-weight: 400;
+        font-size: 2.25rem; 
+        line-height: 2.5rem;
+    }
+    .overlay-card .copyblock .copy {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .overlay-card .copyblock.smallcard .title h2,
+    .overlay-card .copyblock.smallcard .title h2,
+    .overlay-card .copyblock.smallcard .title h2 {
+        font-family: 'LG Smart Regular';
+        font-weight: 400;
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+    .overlay-card-copy-left {
+        position: absolute;
+        width: 75%;
+        left: 5%;
+        padding: 0%;
+        height: auto;
+    }
+    .overlay-card-copy-right {
+        position: absolute;
+        width: 75%;
+        right: 5%;
+        padding: 0%;
+        height: auto;
+    }
+    .overlay-card .copyblock .copy {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: inline-block;
+        max-width: 10em;
+        padding: 0px;
+    }
+    
+}
+
+
+@media only screen 
+  and (max-width: 899.95px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	 /* iPad Portrait copy size issues */
+    .overlay-card .copyblock.smallcard .title h2,
+    .overlay-card .copyblock.smallcard .title h2,
+    .overlay-card .copyblock.smallcard .title h2 {
+        font-family: 'LG Smart Regular';
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: .25rem;
+        padding-bottom: 0.1rem;
+    }
+
+    .overlay-card .copyblock .copy {
+        font-size: 1rem;
+        line-height: 1.15rem;
+    }
+
+    /* mobile hero adjustment */
+    .section.hero .overlay-card {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: block!important;
+        overflow:inherit;
+        object-fit: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+    }
+    .section.hero .overlay-card-copy-left,
+    .section.hero .overlay-card-copy-right,
+    .section.hero .overlay-card-copy-center {
+        position: relative;
+        width: 100%;
+        left: 0%;
+        padding: 50px;
+        height: auto;
+        display: flex;
+        clear: both;
+        text-align: left;
+    }
+    .section.hero .overlay-card-image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        clear: both;
+    }
+
+    /* mobile hero alternate */
+    .section.hero.mobilealt .container-skel {
+        width: 100%;
+        padding: 0;
+    }
+    .section.hero.mobilealt .overlay-card-copy-left,
+    .section.hero.mobilealt .overlay-card-copy-right,
+    .section.hero.mobilealt .overlay-card-copy-center {
+        position: absolute;
+        width: 75%;
+        top: 20%;
+        left: 5%;
+        padding: 0%;
+        height: auto;
+    }
+
+
+
+}
+
+
+
+/*
+================================================================================================================================================================================================================================================================
+PACKAGE AREA
+================================================================================================================================================================================================================================================================
+*/
+
+/* section subhero */
+.section.subhero {
+    padding: 75px 0px;
+}
+.section.subhero .copyblock {
+    text-align: center;
+    font-size: 24px;
+    line-height: 27px;
+}
+
+/* section signup */
+.section.signup .container-skel {
+    background-color: #F9F5F1;
+    padding: 75px 0px;
+}
+
+/* section products */
+.section.products .container-skel {
+    background-color: #f9f7f4;
+    padding-bottom: 50px;
+    border-radius: 50px;
+}
+
+/*
+================================================================
+TABLET LANDSCAPE 
+================================================================
+*/
+@media (min-width: 900px) and (max-width: 1199px) {
+    /* ================================================================ SECTIONNAME TABLET LANDSCAPE ================================================================ */
+   
+    
+}
+
+/*
+================================================================
+MOBILE LANDSCAPE & TABLET PORTRAIT
+================================================================
+*/
+@media (min-width: 600px) and (max-width: 899px) { 
+    /* ================================================================ SECTIONNAME MOBILE LANDSCAPE & TABLET PORTRAIT  ============================================= */
+    
+   
+}
+
+/*
+================================================================
+MOBILE PORTRAIT 
+================================================================
+*/
+@media (max-width: 599px) {
+    /* ================================================================ SECTIONNAME MOBILE PORTRAIT ================================================================ */
+    
+}
