@@ -5,14 +5,15 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import { ReactLenis } from "@studio-freight/react-lenis";
 
 const Home = () => {
-  const [disableLenis, setDisableLenis] = useState(null);
-
+  const [flow, setFlow] = useState(true);
   return (
     <ReactLenis root>
       <ParallaxProvider>
-        <div className="hsadpack wrapper" data-lenis-prevent={disableLenis}>
-          <Carousel />
-          <Select />
+        <div>
+          <button onClick={() => setFlow(!flow)}>Change Style</button>
+        </div>
+        <div className="hsadpack wrapper">
+          {flow ? <Carousel /> : <Select />}
         </div>
       </ParallaxProvider>
     </ReactLenis>

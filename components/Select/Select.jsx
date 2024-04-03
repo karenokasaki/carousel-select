@@ -23,11 +23,11 @@ export default function Select() {
 
   useOnClickOutside(optionsRef, () => {
     setOpen(false);
-    setSelected(null);
   });
 
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState([]);
+  const [placeholder, setPlaceholder] = useState("Select a Showroom");
 
   function handleSelect(e) {
     setOpen(!open);
@@ -48,7 +48,7 @@ export default function Select() {
 
                   <div className="select">
                     <div className="input" onClick={handleSelect}>
-                      <p>Select a Showroom</p>
+                      <p>{placeholder}</p>
                       <img
                         src="./assets/images/arrow-down.png"
                         alt=""
@@ -61,9 +61,13 @@ export default function Select() {
                         <div
                           key={index}
                           className={`option ${
-                            selected === option ? "selected" : ""
+                            selected.includes(option) ? "selected" : ""
                           }`}
-                          onClick={() => setSelected(option)}
+                          onClick={() => {
+                            setSelected([...selected, option]);
+                            setOpen(false);
+                            setPlaceholder(option);
+                          }}
                         >
                           {option}
                         </div>
