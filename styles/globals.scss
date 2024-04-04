@@ -31,12 +31,18 @@
   left: 19%;
 }
 
+.swiper-controls__wrapper[data-state="playing"]
+  .swiper-controls__pause::before {
+  content: url("/assets/images/pause.svg") !important;
+}
+
+.swiper-controls__wrapper[data-state="paused"] .swiper-controls__pause::before {
+  content: url("/assets/images/play.svg") !important;
+}
+
 .swiper-controls__pause::before {
   height: 30px !important;
-  display: flex !important;
   width: 30px !important;
-  align-items: center;
-  justify-content: center;
 }
 
 .progress-bar.active {

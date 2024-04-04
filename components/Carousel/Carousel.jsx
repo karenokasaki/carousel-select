@@ -57,7 +57,7 @@ export default function Select() {
     },
   ];
   const [isPlaying, setIsPlaying] = useState(true);
-  const [openModal, setOpenModal] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
   const progressBar = useRef(null);
   const carousel = useRef(null);
   const modalRef = useRef(null);
