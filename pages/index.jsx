@@ -5,16 +5,12 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import { ReactLenis } from "@studio-freight/react-lenis";
 
 const Home = () => {
-  const [flow, setFlow] = useState(true);
   return (
     <ReactLenis root>
       <ParallaxProvider>
-        <div>
-          <button onClick={() => setFlow(!flow)}>Change Style</button>
-        </div>
-        <div className="hsadpack wrapper">
-          {flow ? <Carousel /> : <Select />}
-        </div>
+        <ComponentWrapper fullWidth>
+          <Select />
+        </ComponentWrapper>
       </ParallaxProvider>
     </ReactLenis>
   );
@@ -24,10 +20,13 @@ const ComponentWrapper = ({ children, fullWidth }) => {
   return (
     <div
       style={{
-        maxWidth: `${fullWidth ? "1600px" : "1630px"}`,
+        // maxWidth: `${fullWidth ? "1600px" : "1630px"}`,
         margin: "0 auto",
-        width: "100%",
+        width: "100vw",
+        height: "100vh",
         padding: `${fullWidth ? "0" : "0 15px "}`,
+        display: "flex",
+        overflow: "hidden",
       }}
     >
       {children}
