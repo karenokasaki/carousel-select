@@ -1,11 +1,11 @@
 import { useState, useRef } from "react";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 
-export default function Select() {
+export default function Select2() {
   const card = {
     title: "LG Showrooms",
     copy: "Discover LG's nationwide virtual showrooms for an immersive exploration of innovation and technology.",
-    image: "./assets/images/showroom.png",
+    image: "./assets/images/showroom2.png",
   };
   const options = [
     {
@@ -71,10 +71,10 @@ export default function Select() {
 
   return (
     <>
-      <div className="comp-container">
+      <div className="comp-container" data-option={true}>
         <div className="comp-left">
           <div>
-            <div className="comp-text">
+            <div className="comp-text" data-option={true}>
               <h2>{card.title}</h2>
               <div className="copy">{card.copy}</div>
             </div>
@@ -117,7 +117,7 @@ export default function Select() {
           <div className="right-img">
             <picture>
               <source
-                srcSet="/assets/images/showroom-tablet.png"
+                srcSet="/assets/images/showroom2-tablet.png"
                 media="(max-width: 950px)"
               />
               <img src={card.image} alt="" />

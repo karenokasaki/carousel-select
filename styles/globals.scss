@@ -93,7 +93,7 @@
 
 /* select input */
 .select {
-  width: 320px;
+  width: 350px;
   height: 50px;
   border-radius: 8px;
   background-color: #f31221;
@@ -109,6 +109,10 @@
     padding: 13px 14px;
     font-size: 16px;
     cursor: pointer;
+
+    p {
+      line-height: normal;
+    }
   }
 
   .arrow[data-open="true"] {
@@ -137,9 +141,14 @@
   .options[data-open="true"] {
     height: auto;
     overflow: visible;
+
+    .option:last-child {
+      padding: 10px 14px;
+    }
   }
+
   .option {
-    height: 44px;
+    min-height: 44px;
     display: flex;
     align-items: center;
     padding: 0 14px;
@@ -226,6 +235,14 @@
   align-items: center;
   background-image: url("/assets/images/blur-background.png");
   margin: 3% auto;
+
+  &[data-option="true"] {
+    background-image: url("/assets/images/blur-background2.png");
+  }
+}
+
+.comp-text[data-option="true"] {
+  color: white;
 }
 
 .comp-container .comp-left {
@@ -257,6 +274,11 @@
     width: unset;
     justify-content: flex-end;
     padding: 16px;
+    min-height: 1200px;
+
+    &[data-option="true"] {
+      background-image: none;
+    }
   }
 
   .comp-container .comp-right {
@@ -279,6 +301,10 @@
 
   .comp-text {
     margin-bottom: 40px;
+
+    &[data-option="true"] {
+      color: black;
+    }
   }
 
   .right-img {
@@ -292,9 +318,26 @@
 @media screen and (max-width: 545px) {
   .comp-container {
     width: 100%;
+    min-height: 900px;
+
+    .comp-left {
+      padding: 31px 24px 0 24px;
+    }
   }
 
   .select {
     width: 100%;
+  }
+
+  .comp-text {
+    h2 {
+      font-size: 40px;
+    }
+
+    margin-bottom: 32px;
+  }
+
+  .options[data-open="true"] {
+    padding-bottom: 14px;
   }
 }
