@@ -235,6 +235,7 @@
   align-items: center;
   background-image: url("/assets/images/blur-background.png");
   margin: 3% auto;
+  user-select: none;
 
   &[data-option="true"] {
     background-image: url("/assets/images/blur-background2.png");
