@@ -2,39 +2,46 @@ import { useState, useRef } from "react";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 export default function Select2() {
-  const card = {
+  const [card, setCard] = useState({
     title: "LG Showrooms",
     copy: "Discover LG's nationwide virtual showrooms for an immersive exploration of innovation and technology.",
     image: "./assets/images/showroom2.png",
-  };
+  });
   const options = [
     {
       title: "LINCOLNSHIRE BIC",
       link: "https://my.matterport.com/show/?m=xPCUCvby3YJ",
+      image: "",
     },
     {
       title: "WYNDHAM 2023",
       link: "https://my.matterport.com/show/?m=aW5iERXkZxM",
+      image: "",
     },
     {
       title: "RSNA 2023",
       link: "https://my.matterport.com/show/?m=cYgcKXHxqW4",
+      image: "",
     },
     {
       title: "CEDIA 2023",
       link: "https://my.matterport.com/show/?m=DLFe2Fd5ymc",
+      image: "",
     },
     {
       title: "CES PRESS SUITE 2024",
       link: "https://my.matterport.com/show/?m=FSd1CxPSVuu",
+      image: "",
     },
     {
       title: "FETC 2024",
       link: "https://my.matterport.com/show/?m=xn8Z11SGVLV",
+      image: "",
     },
     {
       title: "BUSINESS INNOVATION CENTER - CHICAGO",
       link: "https://my.matterport.com/show/?m=Ppm2855Musi",
+      image: "",
     },
   ];
 
@@ -45,6 +52,10 @@ export default function Select2() {
   const [openModal, setOpenModal] = useState(false);
   const [selected, setSelected] = useState("");
   const [placeholder, setPlaceholder] = useState("Select a Showroom");
+  const [imageOnDisplay, setImageOnDisplay] = useState([
+    "./assets/images/showroom2.png",
+    "./assets/images/showroom.png",
+  ]);
 
   useOnClickOutside(optionsRef, () => {
     setOpen(false);
@@ -62,11 +73,32 @@ export default function Select2() {
     setPlaceholder(option.title);
     setSrc(option.link);
     setOpen(false);
+    changeImages();
   }
 
   function handleOk(e) {
     if (!src) return;
     setOpenModal(true);
+  }
+
+  function changeImages() {
+    const bg = document.querySelector(".comp-container");
+    const compText = document.querySelector(".comp-text").querySelector("h2");
+    const copy = document.querySelector(".comp-text").querySelector("div");
+
+    if (card.image === "/assets/images/showroom.png") {
+      setCard({ ...card, image: "/assets/images/showroom2.png" });
+      bg.style.backgroundImage = `url("/assets/images/blur-background2.png")`;
+      compText.style.color = "#fff";
+      copy.style.color = "#fff";
+    } else {
+      setCard({ ...card, image: "/assets/images/showroom.png" });
+      bg.style.backgroundImage = `url("/assets/images/blur-background.png")`;
+      compText.style.color = "#000000";
+      copy.style.color = "#000000";
+    }
+
+    console.log(bg);
   }
 
   return (

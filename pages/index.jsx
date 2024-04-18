@@ -14,7 +14,8 @@ const Home = () => {
           <button onClick={() => setFlow(!flow)}>Change Style</button>
         </div>
         <ComponentWrapper fullWidth>
-          {flow ? <Select2 /> : <Select />}
+          {/* {flow ? <Select2 /> : <Select />} */}
+          <Select2 />
         </ComponentWrapper>
       </ParallaxProvider>
     </ReactLenis>
