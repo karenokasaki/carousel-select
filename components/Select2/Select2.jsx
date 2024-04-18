@@ -85,20 +85,45 @@ export default function Select2() {
     const bg = document.querySelector(".comp-container");
     const compText = document.querySelector(".comp-text").querySelector("h2");
     const copy = document.querySelector(".comp-text").querySelector("div");
+    const img1 = document.querySelector(".comp-img-1");
+    const img2 = document.querySelector(".comp-img-2");
+
+    // Adicionando uma classe para ativar a transição
+    bg.classList.add("transition-bg");
+    compText.classList.add("transition-text");
+    copy.classList.add("transition-text");
+    img1.classList.add("transition-img");
+    img2.classList.add("transition-img");
 
     if (card.image === "/assets/images/showroom.png") {
       setCard({ ...card, image: "/assets/images/showroom2.png" });
       bg.style.backgroundImage = `url("/assets/images/blur-background2.png")`;
       compText.style.color = "#fff";
       copy.style.color = "#fff";
+      img1.style.opacity = 1; // Esconde a primeira imagem
+      img1.style.height = "auto";
+      img2.style.height = 0;
+      img2.style.opacity = 0; // Mostra a segunda imagem
     } else {
       setCard({ ...card, image: "/assets/images/showroom.png" });
       bg.style.backgroundImage = `url("/assets/images/blur-background.png")`;
       compText.style.color = "#000000";
       copy.style.color = "#000000";
+      img1.style.opacity = 0; // Mostra a primeira imagem
+      img2.style.opacity = 1; // Esconde a segunda imagem
+
+      img1.style.height = 0;
+      img2.style.height = "auto";
     }
 
-    console.log(bg);
+    // Aguarde um curto período para garantir que a transição CSS seja aplicada antes de remover a classe de transição
+    setTimeout(() => {
+      bg.classList.remove("transition-bg");
+      compText.classList.remove("transition-text");
+      copy.classList.remove("transition-text");
+      img1.classList.remove("transition-img");
+      img2.classList.remove("transition-img");
+    }, 1000); // Ajuste o tempo conforme necessário
   }
 
   return (
@@ -152,7 +177,16 @@ export default function Select2() {
                 srcSet="/assets/images/showroom2-tablet.png"
                 media="(max-width: 950px)"
               />
-              <img src={card.image} alt="" />
+              <img
+                src={"/assets/images/showroom2.png"}
+                alt=""
+                className="comp-img-1"
+              />
+              <img
+                src={"/assets/images/showroom.png"}
+                alt=""
+                className="comp-img-2"
+              />
             </picture>
           </div>
         </div>

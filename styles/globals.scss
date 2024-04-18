@@ -265,6 +265,23 @@
   border-radius: 0 80px 80px 0;
 }
 
+.transition-bg {
+  transition: background-image 0.5s ease-in-out;
+}
+
+.transition-text {
+  transition: color 0.5s ease-in-out;
+}
+
+.transition-img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.comp-img-2 {
+  opacity: 0;
+  height: 0;
+}
+
 @media screen and (max-width: 950px) {
   .comp-container {
     flex-direction: column-reverse;
